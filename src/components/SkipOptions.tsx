@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Check, Clock, Zap, Route, AlertTriangle, Weight, Info, X } from 'lucide-react';
+import { Check, Clock, Zap, Route, AlertTriangle, Weight, Info, X, ChevronLast, ArrowLeftToLine, ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react';
 
 type Skip = {
   id: string | number;
@@ -235,9 +235,14 @@ const SkipOptions = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full flex justify-end">
-              <button className="w-full bg-black text-white py-3 px-4 rounded-lg font-medium hover:bg-black">
-                Proceed to Booking
+            <div className="w-full flex justify-end gap-2">
+            <button className="flex justify-center bg-black text-white py-2 px-3 rounded-lg font-medium hover:bg-black">
+                <ChevronLeft />
+                Back
+              </button>
+              <button className="flex justify-center items-center bg-black text-white py-2 px-3 rounded-lg font-medium hover:bg-black">
+                Next
+                <ChevronRight />
               </button>
             </div>
           </div>
