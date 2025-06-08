@@ -10,7 +10,7 @@ type SkipCardProps = {
 const SkipCard = ({ skip, isSelected, onSelect }: SkipCardProps) => {
   return (
     <div 
-      className={`bg-white rounded-xl shadow-sm overflow-hidden border-2 transition-all duration-200 cursor-pointer hover:border-black hover:shadow-md ${
+      className={`bg-white rounded-xl shadow-md  overflow-hidden border border-gray-300 transition-all duration-200 cursor-pointer hover:border-black hover:shadow-md ${
         isSelected ? 'border-black shadow-md' : 'border-transparent'
       }`}
       onClick={onSelect}

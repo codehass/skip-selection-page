@@ -1,5 +1,5 @@
-import { AlertTriangle, Check, ChevronLeft, ChevronRight, Info, Route, Weight, X } from 'lucide-react';
-import type { Skip } from '../types/skip';
+import { AlertTriangle, Check, ChevronLeft, ChevronRight, Info, Route, Weight, X } from "lucide-react";
+import type { Skip } from "../types/skip";
 
 type SkipDetailsProps = {
   skip: Skip;
@@ -24,7 +24,13 @@ const SkipDetails = ({ skip, onClose }: SkipDetailsProps) => {
             <X className="w-6 h-6 text-gray-500" />
           </button>
         </div>
-        
+        <div className="px-6 py-3 bg-blue-50 border-b border-blue-100 flex items-start">
+          <Info className="w-4 h-4 text-blue-600 mt-0.5 mr-2 flex-shrink-0" />
+          <p className="text-sm text-blue-700">
+            <strong className="font-medium">Note:</strong> Imagery and information shown throughout this website may not reflect the exact shape or size specification, colours may vary, options and/or accessories may be featured at additional cost.
+          </p>
+        </div>
+
         {/* Content */}
         <div className="p-4 space-y-4">
           {/* Main details */}
@@ -47,7 +53,7 @@ const SkipDetails = ({ skip, onClose }: SkipDetailsProps) => {
                 <div className="flex justify-between items-center py-3 border-b border-gray-200">
                   <span className="text-gray-600">Price (ex VAT)</span>
                   <span className="font-medium text-gray-900">
-                    {skip.price_before_vat ? `£${skip.price_before_vat.toFixed(2)}` : 'N/A'}
+                    {skip.price_before_vat ? `£${skip.price_before_vat.toFixed(2)}` : "N/A"}
                   </span>
                 </div>
                 <div className="flex justify-between items-center py-3">
@@ -55,7 +61,7 @@ const SkipDetails = ({ skip, onClose }: SkipDetailsProps) => {
                   <span className="font-medium text-gray-900">
                     {skip.price_before_vat 
                       ? `£${(skip.price_before_vat * skip.vat/100).toFixed(2)}` 
-                      : 'N/A'}
+                      : "N/A"}
                   </span>
                 </div>
               </div>
