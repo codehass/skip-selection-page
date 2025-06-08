@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Check, Clock, Zap, Route, AlertTriangle, Weight, Info, X, ChevronLast, ArrowLeftToLine, ChevronFirst, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Check, Clock, Zap, Route, AlertTriangle, Weight, Info, X, ChevronLeft, ChevronRight} from 'lucide-react';
+import ProgressBar from './ProgressBar';
 
 type Skip = {
   id: string | number;
@@ -42,6 +43,8 @@ const SkipOptions = () => {
 
   return (
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <ProgressBar />
+
   <div className="text-center mb-10">
     <h2 className="text-3xl font-bold text-gray-900 mb-2">Choose Your Skip Size</h2>
     <p className="text-gray-500">Select a skip to view full details</p>
