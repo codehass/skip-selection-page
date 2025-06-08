@@ -1,12 +1,16 @@
 import './App.css'
 import SkipOptions from './components/SkipOptions';
+import { ThemeColors } from './components/ThemeColors';
+import { ThemeProvider } from './components/ThemeContext';
 
 function App() {
 
   return (
-    <div>
-      <SkipOptions />
-    </div>
+    <ThemeProvider>
+      <ThemeColors>
+        <SkipOptions />
+      </ThemeColors>
+    </ThemeProvider>
   )
 }
 

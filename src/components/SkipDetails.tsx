@@ -4,6 +4,7 @@ import type { Skip } from "../types/skip";
 type SkipDetailsProps = {
   skip: Skip;
   onClose: () => void;
+  darkMode?: boolean;
 };
 
 const SkipDetails = ({ skip, onClose }: SkipDetailsProps) => {
