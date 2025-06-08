@@ -1,10 +1,11 @@
 import './App.css'
+import SkipOptions from './components/SkipOptions';
 
 function App() {
 
   return (
     <div>
-      this is skip-selection-page 
+      <SkipOptions />
     </div>
   )
 }
