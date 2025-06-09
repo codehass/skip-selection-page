@@ -4,12 +4,12 @@ import { useTheme } from './ThemeContext';
 
 function ProgressBar() {
   const [activeStep] = useState(2); // 2 = "Select Skip" step
-  const { darkMode } = useTheme()
+  const { darkMode } = useTheme();
 
   return (
     <div className="w-full mb-8 relative z-10">
-      {/* Mobile Progress Bar (shows only on small screens) */}
-      <div className={`block sm:hidden w-full ${darkMode ? 'bg-gray-700' : 'bg-gray-200'} h-1.5 mb-4 rounded-full`}>
+      {/* Mobile Progress Bar */}
+      <div className={`block sm:hidden w-full ${darkMode ? 'bg-gray-700' : 'bg-gray-200'} h-1.5 mb-4 rounded-full transition-colors duration-300`}>
         <div 
           className={`${darkMode ? 'bg-white' : 'bg-black'} h-1.5 rounded-full transition-all duration-300`} 
           style={{ width: `${(activeStep / 5) * 100}%` }}
@@ -42,13 +42,13 @@ function ProgressBar() {
             <div className={`
               relative rounded-full p-2 flex items-center justify-center
               transition-all duration-200 mb-1 sm:mb-2
-              ${step <= activeStep ? (darkMode ? 'bg-white' : 'bg-black') : (darkMode ? 'bg-gray-700' : 'bg-gray-200')}
-              ${step === activeStep ? `ring-2 ring-offset-2 ${darkMode ? 'ring-white' : 'ring-black'} scale-110` : ''}
+              ${step <= activeStep ? "dark:bg-white bg-black ": "dark:bg-gray-700 bg-gray-200"}
+              ${step === activeStep ? `ring-2 ring-offset-2 dark:ring-white ring-black scale-110` : ''}
               w-10 h-10 sm:w-12 sm:h-12
             `}>
               <Icon 
                 className={`
-                  ${step <= activeStep ? (darkMode ? 'text-black' : 'text-white') : (darkMode ? 'text-gray-300' : 'text-gray-400')}
+                  ${step <= activeStep ? "dark:text-black text-white" : "darkMode dark:text-gray-300 text-gray-400"}
                   w-5 h-5 sm:w-6 sm:h-6
                 `} 
               />
@@ -61,7 +61,7 @@ function ProgressBar() {
             {/* Label */}
             <span className={`
               text-center text-[10px] sm:text-xs font-medium
-              ${step <= activeStep ? (darkMode ? 'text-white' : 'text-black') : (darkMode ? 'text-gray-300' : 'text-gray-400')}
+              ${step <= activeStep ? "dark:text-white text-black" : "dark:text-gray-300 text-gray-400"}
               px-0.5 leading-tight
             `}>
               {label}
