@@ -1,54 +1,75 @@
-# React + TypeScript + Vite
+# Skip Hire Booking Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React application for selecting and booking skips, with focus on clean code, maintainability, and excellent UI/UX.
 
-Currently, two official plugins are available:
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start;">
+  <img src="./src/assets/images/desktop-1.png" alt="Desktop Screenshot 1" style="max-width: 100%; width: 48%;">
+  <img src="./src/assets/images/desktop-2.png" alt="Phone Screenshot 1" style="max-width: 100%; width: 48%;">
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
 
-## Expanding the ESLint configuration
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start;">
+  <img src="./src/assets/images/phone-1.png" alt="Desktop Screenshot 2" style="max-width: 100%; width: 48%;">
+  <img src="./src/assets/images/phone-2.png" alt="Phone Screenshot 2" style="max-width: 100%; width: 48%;">
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<br/>
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start;">
+  <img src="./src/assets/images/ipad-1.png" alt="iPad Screenshot 1" style="max-width: 100%; width: 48%;">
+  <img src="./src/assets/images/ipad-2.png" alt="iPad Screenshot 2" style="max-width: 100%; width: 48%;">
+</div>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop
+- **Dark/Light Mode**: Smooth theme switching with system preference detection
+- **Interactive UI**: Animated progress bar and skip selection cards
+- **Data-Driven**: Real-time skip data from API endpoint
+- **Accessible**: WCAG compliant with proper contrast ratios
+- **Type Safe**: Built with TypeScript for better developer experience
+
+## Tech Stack
+
+- React 18 with Hooks
+- TypeScript
+- Tailwind CSS
+- Lucide Icons
+- Context API (State Management)
+- Vite (Build Tool)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git git@github.com:codehass/skip-selection-page-.git
+   cd skip-selection-page
+   ```
+
+2. Install dependencies::
+   ```bash 
+   pnpm install
+   ```
+
+3. Run the development server::
+   ```bash
+   pnpm run dev
+   ```
+## Code Structure
+<pre><code> /src 
+├── components 
+│ ├── ProgressBar.tsx # Step progress indicator 
+│ ├── SkipCard.tsx # Individual skip display card 
+│ ├── SkipDetails.tsx # Detailed skip information panel 
+│ ├── ThemeToggle.tsx # Dark/light mode switch 
+│ └── Skeleton.tsx # Loading state component 
+├── context 
+│ └── ThemeContext.tsx # Dark/light mode state management 
+├── types 
+│ └── skip.ts # Type definitions 
+├── App.tsx # Main application component 
+└── main.tsx # Application entry point 
+</code></pre>
+
