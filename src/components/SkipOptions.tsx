@@ -33,9 +33,11 @@ const SkipOptions = () => {
   const selectedSkip = skips.find(skip => skip.id === selectedId);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 dark:bg-gray-900">
-      <div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 dark:bg-gray-900">
+      <div className='flex justify-end items-center mb-6'>
         <ThemeToggle />
+      </div>
+      <div>
         <ProgressBar />
 
         <div className="text-center mb-10">
@@ -46,7 +48,7 @@ const SkipOptions = () => {
             Select a skip to view full details
           </p>
         </div>
-        
+
         {isLoading ? (
           <Skeleton />
         ) : (
@@ -64,8 +66,8 @@ const SkipOptions = () => {
             </div>
 
             {selectedSkip && (
-              <SkipDetails 
-                skip={selectedSkip} 
+              <SkipDetails
+                skip={selectedSkip}
                 onClose={() => setSelectedId(null)}
                 darkMode={darkMode}
               />

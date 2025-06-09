@@ -16,7 +16,7 @@ const SkipDetails = ({ skip, onClose }: SkipDetailsProps) => {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
             {skip.size}-Yard Skip Details
           </h3>
-          <button 
+          <button
             onClick={onClose}
             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             aria-label="Close details"
@@ -47,7 +47,7 @@ const SkipDetails = ({ skip, onClose }: SkipDetailsProps) => {
                   ["Skip Size", `${skip.size} Yards`],
                   ["Hire Period", `${skip.hire_period_days} days`],
                   ["Price (ex VAT)", skip.price_before_vat ? `£${skip.price_before_vat.toFixed(2)}` : "N/A"],
-                  ["VAT", skip.price_before_vat ? `£${(skip.price_before_vat * skip.vat/100).toFixed(2)}` : "N/A"],
+                  ["VAT", skip.price_before_vat ? `£${(skip.price_before_vat * skip.vat / 100).toFixed(2)}` : "N/A"],
                 ].map(([label, value], i) => (
                   <div key={i} className={`flex justify-between items-center py-3 ${i < 3 ? 'border-b border-gray-200 dark:border-gray-700' : ''}`}>
                     <span className="text-gray-600 dark:text-gray-300">{label}</span>
@@ -118,14 +118,14 @@ const SkipDetails = ({ skip, onClose }: SkipDetailsProps) => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-between gap-4 pt-4">
-            <button 
+            <button
               onClick={onClose}
               className="flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             >
               <ChevronLeft className="w-5 h-5" />
-              Back 
+              Back
             </button>
-            <button 
+            <button
               className="flex items-center justify-center gap-2 py-3 px-6 rounded-lg font-medium bg-black text-white hover:bg-gray-600 transition-colors"
             >
               Next

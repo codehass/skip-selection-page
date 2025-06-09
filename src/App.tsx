@@ -1,6 +1,4 @@
-import './App.css'
 import SkipOptions from './components/SkipOptions';
-
 
 function App() {
 
