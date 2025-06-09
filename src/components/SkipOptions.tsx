@@ -4,7 +4,7 @@ import Skeleton from './Skeleton';
 import SkipCard from './SkipCard';
 import SkipDetails from './SkipDetails';
 import type { Skip } from '../types/skip';
-import { useTheme } from './ThemeContext';
+import { useTheme } from '../context/ThemeContext';
 import { ThemeToggle } from './ThemeToggle';
 
 const SkipOptions = () => {

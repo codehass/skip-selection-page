@@ -1,6 +1,6 @@
 import { Check, MapPinned, Trash2, Truck, CalendarDays, Shield, CreditCard } from 'lucide-react';
 import { useState } from "react";
-import { useTheme } from './ThemeContext';
+import { useTheme } from '../context/ThemeContext';
 
 function ProgressBar() {
   const [activeStep] = useState(2); // 2 = "Select Skip" step
