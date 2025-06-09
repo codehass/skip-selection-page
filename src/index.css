@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+/* Optional: only animate when toggling theme */
+html.theme-transition,
+html.theme-transition * {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease !important;
+}
+
+.dark{
+  @apply bg-gray-900 text-gray-100;
+}
