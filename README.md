@@ -44,13 +44,13 @@ A modern, responsive React application for selecting and booking skips, with foc
 
 ## 🚀 Live Demo
 
-Check out the live demo here: [Link](https://the-wild-oasis-website-theta-three.vercel.app/)
+Check out the live demo here: [Link](https://skip-selection-page.vercel.app/)
 
 ## 📦 Installation
 
 1. Clone the repository:
    ```bash
-   git git@github.com:codehass/skip-selection-page-.git
+   git git@github.com:codehass/skip-selection-page.git
    cd skip-selection-page
    ```
 
